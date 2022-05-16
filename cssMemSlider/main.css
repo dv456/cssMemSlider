@@ -71,3 +71,33 @@ input{
     border: 0.2rem solid white;
     background-color: white;
 }
+#s1:checked ~ .text_button .button .btn #b1,
+#s2:checked ~ .text_button .button .btn #b2,
+#s3:checked ~ .text_button .button .btn #b3,
+#s4:checked ~ .text_button .button .btn #b4 {
+    background-color: darkslategray;
+}
+#s1:checked ~ .img_container .div_img {
+    transform: translateX(0);
+}
+#s2:checked ~ .img_container .div_img {
+    transform: translateX(-100%);
+}
+#s3:checked ~ .img_container .div_img {
+    transform: translateX(-200%);
+} 
+#s4:checked ~ .img_container .div_img {
+    transform: translateX(-300%);
+}
+#s1:checked ~ .text_button .text_content .text {
+    transform: translateX(0);
+}
+#s2:checked ~ .text_button .text_content .text {
+    transform: translateX(-100%);
+}
+#s3:checked ~ .text_button .text_content .text {
+    transform: translateX(-200%);
+}
+#s4:checked ~ .text_button .text_content .text {
+    transform: translateX(-300%);
+}
