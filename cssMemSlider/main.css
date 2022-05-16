@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: darkslategray;
+}
+.container {
+    padding: 10vh;
+    height: 100vh;
+}
+.slider{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+input{
+    display: none;
+}
+.img_container {
+    display: flex;
+    overflow: hidden;
+    width: 400%;
+}
+.div_img {
+    width: 25%;
+    display: flex;
+    transform: translateX(0);
+    justify-content: center;
+    transition: all 0.5s;
+    object-fit:fill;
+}
+.img {
+    max-width: 100%;
+    object-fit:fill;
+}
+.text_button{
+    display: flex;
+}
+.text_content {
+    overflow: hidden;
+    width: 400%;
+    display: flex;
+    align-items: center;
+}
+.text {
+    color:white;
+    min-width: 100%;
+    transition: all 0.5s;
+    transform: translateX(0);
+    font-size: 1rem;
+}
+.button{
+    display: flex;
+}
+.btn {
+    cursor: pointer;
+    padding: 0.5rem;   
+}
+.point{
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: plum;
+    border: 0.2rem solid plum;
+    transition: all 0.5s;
+}
+.btn:hover .point {
+    border: 0.2rem solid white;
+    background-color: white;
+}
+#s1:checked ~ .text_button .button .btn #b1,
+#s2:checked ~ .text_button .button .btn #b2,
+#s3:checked ~ .text_button .button .btn #b3,
+#s4:checked ~ .text_button .button .btn #b4 {
+    background-color: darkslategray;
+}
+#s1:checked ~ .img_container .div_img {
+    transform: translateX(0);
+}
+#s2:checked ~ .img_container .div_img {
+    transform: translateX(-100%);
+}
+#s3:checked ~ .img_container .div_img {
+    transform: translateX(-200%);
+} 
+#s4:checked ~ .img_container .div_img {
+    transform: translateX(-300%);
+}
+#s1:checked ~ .text_button .text_content .text {
+    transform: translateX(0);
+}
+#s2:checked ~ .text_button .text_content .text {
+    transform: translateX(-100%);
+}
+#s3:checked ~ .text_button .text_content .text {
+    transform: translateX(-200%);
+}
+#s4:checked ~ .text_button .text_content .text {
+    transform: translateX(-300%);
+}
+@media(max-width: 700px) {
+    .container {
+        padding: 3vh;
+    }
+    .slider{
+        row-gap: 2vh;
+    }
+    .text_button {
+        flex-direction: column;
+        row-gap: 2vh;
+        display: flex;
+        padding: 0;
+    }
+    .text_content {
+        order: 2;
+        width: 100%;
+    }
+    .button {
+        align-self: center;
+    }
+}
