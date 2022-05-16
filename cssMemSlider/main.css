@@ -101,3 +101,24 @@ input{
 #s4:checked ~ .text_button .text_content .text {
     transform: translateX(-300%);
 }
+@media(max-width: 700px) {
+    .container {
+        padding: 3vh;
+    }
+    .slider{
+        row-gap: 2vh;
+    }
+    .text_button {
+        flex-direction: column;
+        row-gap: 2vh;
+        display: flex;
+        padding: 0;
+    }
+    .text_content {
+        order: 2;
+        width: 100%;
+    }
+    .button {
+        align-self: center;
+    }
+}
