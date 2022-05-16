@@ -16,3 +16,58 @@ body {
     flex-direction: column;
     row-gap: 5vh;
 }
+input{
+    display: none;
+}
+.img_container {
+    display: flex;
+    overflow: hidden;
+    width: 400%;
+}
+.div_img {
+    width: 25%;
+    display: flex;
+    transform: translateX(0);
+    justify-content: center;
+    transition: all 0.5s;
+    object-fit:fill;
+}
+.img {
+    max-width: 100%;
+    object-fit:fill;
+}
+.text_button{
+    display: flex;
+}
+.text_content {
+    overflow: hidden;
+    width: 400%;
+    display: flex;
+    align-items: center;
+}
+.text {
+    color:white;
+    min-width: 100%;
+    transition: all 0.5s;
+    transform: translateX(0);
+    font-size: 1rem;
+}
+.button{
+    display: flex;
+}
+.btn {
+    cursor: pointer;
+    padding: 0.5rem;   
+}
+.point{
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: plum;
+    border: 0.2rem solid plum;
+    transition: all 0.5s;
+}
+.btn:hover .point {
+    border: 0.2rem solid white;
+    background-color: white;
+}
